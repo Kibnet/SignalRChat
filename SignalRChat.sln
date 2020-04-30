@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SignalRChatClient", "Signal
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SignalRChat", "SignalRChat\SignalRChat.csproj", "{F41CE1CD-3626-4C80-AEF3-F03653197780}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SignalRChat.Client.WPF.NetCore31", "SignalRChat.Client.WPF.NetCore31\SignalRChat.Client.WPF.NetCore31.csproj", "{5BBAC4EF-EC2C-493A-86ED-209739B3B5C1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{F41CE1CD-3626-4C80-AEF3-F03653197780}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F41CE1CD-3626-4C80-AEF3-F03653197780}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F41CE1CD-3626-4C80-AEF3-F03653197780}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5BBAC4EF-EC2C-493A-86ED-209739B3B5C1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5BBAC4EF-EC2C-493A-86ED-209739B3B5C1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5BBAC4EF-EC2C-493A-86ED-209739B3B5C1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5BBAC4EF-EC2C-493A-86ED-209739B3B5C1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
