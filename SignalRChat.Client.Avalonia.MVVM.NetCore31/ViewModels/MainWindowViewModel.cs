@@ -3,6 +3,7 @@ using System.Collections.ObjectModel;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.SignalR.Client;
 using ReactiveUI;
+using ReactiveUI.Fody.Helpers;
 
 namespace SignalRChat.Client.Avalonia.MVVM.NetCore31.ViewModels
 {
@@ -41,8 +42,7 @@ namespace SignalRChat.Client.Avalonia.MVVM.NetCore31.ViewModels
                     IsConnected = false;
                     Messages.Add(ex.Message);
                 }
-            } //, this.ObservableForProperty(m => m.IsConnected, b => !b)
-              );
+            } , this.WhenAnyValue(m => m.IsConnected, b => b == false));
             
             SendCommand = ReactiveCommand.CreateFromTask(async () =>
             {
@@ -53,21 +53,24 @@ namespace SignalRChat.Client.Avalonia.MVVM.NetCore31.ViewModels
                 }
                 catch (Exception ex)
                 {
+                    IsConnected = false;
                     Messages.Add(ex.Message);
                 }
-            }//, this.ObservableForProperty(m => m.IsConnected, b => b == true)
-                );
+            }, this.WhenAnyValue(m => m.IsConnected, b => b == true));
             IsConnected = false;
         }
         
         readonly HubConnection _connection;
 
+        [Reactive]
         public bool IsConnected { get;set; }
 
         public ObservableCollection<string> Messages { get; set; }
 
+        [Reactive]
         public string UserName { get; set; }
 
+        [Reactive]
         public string MessageText { get; set; }
 
         public IReactiveCommand ConnectCommand { get; }
