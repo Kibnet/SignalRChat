@@ -1,8 +1,8 @@
 ﻿using Avalonia;
 using Avalonia.Controls.ApplicationLifetimes;
 using Avalonia.Markup.Xaml;
-using SignalRChat.Client.Avalonia.MVVM.NetCore31.ViewModels;
 using SignalRChat.Client.Avalonia.MVVM.NetCore31.Views;
+using SignalRChat.Client.ViewModel;
 
 namespace SignalRChat.Client.Avalonia.MVVM.NetCore31
 {

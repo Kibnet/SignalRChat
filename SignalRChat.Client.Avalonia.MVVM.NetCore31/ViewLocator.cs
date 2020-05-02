@@ -1,7 +1,7 @@
 using System;
 using Avalonia.Controls;
 using Avalonia.Controls.Templates;
-using SignalRChat.Client.Avalonia.MVVM.NetCore31.ViewModels;
+using ReactiveUI;
 
 namespace SignalRChat.Client.Avalonia.MVVM.NetCore31
 {
@@ -26,7 +26,7 @@ namespace SignalRChat.Client.Avalonia.MVVM.NetCore31
 
         public bool Match(object data)
         {
-            return data is ViewModelBase;
+            return data is ReactiveObject;
         }
     }
 }

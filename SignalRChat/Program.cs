@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore;
 using Microsoft.AspNetCore.Hosting;
 
-namespace SignalRChat
+namespace SignalRChat.Server
 {
     public class Program
     {

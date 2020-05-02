@@ -3,9 +3,9 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using SignalRChat.Hubs;
+using SignalRChat.Server.Hubs;
 
-namespace SignalRChat
+namespace SignalRChat.Server
 {
     public class Startup
     {

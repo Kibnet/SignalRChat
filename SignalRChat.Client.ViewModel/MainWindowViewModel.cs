@@ -4,10 +4,12 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.SignalR.Client;
 using ReactiveUI;
 using ReactiveUI.Fody.Helpers;
+using SignalR.EasyUse.Client;
+using SignalRChat.Interface;
 
-namespace SignalRChat.Client.Avalonia.MVVM.NetCore31.ViewModels
+namespace SignalRChat.Client.ViewModel
 {
-    public class MainWindowViewModel : ViewModelBase
+    public class MainWindowViewModel : ReactiveObject
     {
         public MainWindowViewModel()
         {
@@ -21,16 +23,26 @@ namespace SignalRChat.Client.Avalonia.MVVM.NetCore31.ViewModels
                 await _connection.StartAsync();
             };
 
+            var hub = _connection.CreateHub<IChatHub>();
+
             Messages = new ObservableCollection<string>();
             ConnectCommand = ReactiveCommand.CreateFromTask(async () =>
             {
-                _connection.On<string, string>("ReceiveMessage", (user, message) =>
+                //Native subcribe
+                //_connection.On<string, string>("ReceiveMessage", (user, message) =>
+                //{
+                //    var newMessage = $"{user}: {message}";
+                //    Messages.Add(newMessage);
+
+                //});
+
+                //EasyUse subcribe
+                _connection.Subscribe<ReceiveMessage>(data =>
                 {
-                    var newMessage = $"{user}: {message}";
+                    var newMessage = $"{data.User}: {data.Message}";
                     Messages.Add(newMessage);
-
                 });
-
+                
                 try
                 {
                     await _connection.StartAsync();
@@ -42,14 +54,17 @@ namespace SignalRChat.Client.Avalonia.MVVM.NetCore31.ViewModels
                     IsConnected = false;
                     Messages.Add(ex.Message);
                 }
-            } , this.WhenAnyValue(m => m.IsConnected, b => b == false));
-            
+            }, this.WhenAnyValue(m => m.IsConnected, b => b == false));
+
             SendCommand = ReactiveCommand.CreateFromTask(async () =>
             {
                 try
                 {
-                    await _connection.InvokeAsync("SendMessage",
-                        UserName, MessageText);
+                    //Native send message
+                    //await _connection.InvokeAsync("SendMessage", UserName, MessageText);
+                    
+                    //EasyUse send message
+                    await hub.SendMessage(UserName, MessageText);
                 }
                 catch (Exception ex)
                 {
@@ -59,11 +74,11 @@ namespace SignalRChat.Client.Avalonia.MVVM.NetCore31.ViewModels
             }, this.WhenAnyValue(m => m.IsConnected, b => b == true));
             IsConnected = false;
         }
-        
+
         readonly HubConnection _connection;
 
         [Reactive]
-        public bool IsConnected { get;set; }
+        public bool IsConnected { get; set; }
 
         public ObservableCollection<string> Messages { get; set; }
 
