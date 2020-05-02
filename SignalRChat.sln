@@ -5,7 +5,7 @@ VisualStudioVersion = 16.0.30011.22
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SignalRChat.Client.WPF.NetFramework", "SignalRChat.Client.WPF.NetFramework\SignalRChat.Client.WPF.NetFramework.csproj", "{2399368A-C565-4B13-94C6-9FFC0BE8D867}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SignalRChat.Server", "SignalRChat\SignalRChat.Server.csproj", "{F41CE1CD-3626-4C80-AEF3-F03653197780}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SignalRChat.Server", "SignalRChat.Server\SignalRChat.Server.csproj", "{F41CE1CD-3626-4C80-AEF3-F03653197780}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SignalRChat.Client.WPF.NetCore31", "SignalRChat.Client.WPF.NetCore31\SignalRChat.Client.WPF.NetCore31.csproj", "{5BBAC4EF-EC2C-493A-86ED-209739B3B5C1}"
 EndProject
