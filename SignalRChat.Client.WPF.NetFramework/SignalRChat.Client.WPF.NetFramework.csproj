@@ -96,7 +96,7 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.Connections.Abstractions">
-      <Version>3.1.4</Version>
+      <Version>3.1.5</Version>
     </PackageReference>
     <PackageReference Include="Microsoft.AspNetCore.SignalR.Client">
       <Version>3.1.4</Version>
