@@ -1,0 +1,7 @@
+{
+  "profiles": {
+    "SignalRChat.Client.WPF.NetCore31": {
+      "commandName": "Project"
+    }
+  }
+}

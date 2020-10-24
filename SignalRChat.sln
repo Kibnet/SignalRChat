@@ -6,14 +6,23 @@ MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SignalRChat.Client.WPF.NetFramework", "SignalRChat.Client.WPF.NetFramework\SignalRChat.Client.WPF.NetFramework.csproj", "{2399368A-C565-4B13-94C6-9FFC0BE8D867}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SignalRChat.Server", "SignalRChat.Server\SignalRChat.Server.csproj", "{F41CE1CD-3626-4C80-AEF3-F03653197780}"
+	ProjectSection(ProjectDependencies) = postProject
+		{25D7D449-4FDE-47B9-9159-5B6BE156DDEF} = {25D7D449-4FDE-47B9-9159-5B6BE156DDEF}
+	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SignalRChat.Client.WPF.NetCore31", "SignalRChat.Client.WPF.NetCore31\SignalRChat.Client.WPF.NetCore31.csproj", "{5BBAC4EF-EC2C-493A-86ED-209739B3B5C1}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SignalRChat.Client.Avalonia.MVVM.NetCore31", "SignalRChat.Client.Avalonia.MVVM.NetCore31\SignalRChat.Client.Avalonia.MVVM.NetCore31.csproj", "{05B76738-62EF-44B3-82EB-D06EDE571F34}"
+	ProjectSection(ProjectDependencies) = postProject
+		{2683AA64-1D56-4A64-BF50-FFDC6A620314} = {2683AA64-1D56-4A64-BF50-FFDC6A620314}
+	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SignalRChat.Interface", "SignalRChat.Interface\SignalRChat.Interface.csproj", "{25D7D449-4FDE-47B9-9159-5B6BE156DDEF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SignalRChat.Client.ViewModel", "SignalRChat.Client.ViewModel\SignalRChat.Client.ViewModel.csproj", "{2683AA64-1D56-4A64-BF50-FFDC6A620314}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SignalRChat.Client.ViewModel", "SignalRChat.Client.ViewModel\SignalRChat.Client.ViewModel.csproj", "{2683AA64-1D56-4A64-BF50-FFDC6A620314}"
+	ProjectSection(ProjectDependencies) = postProject
+		{25D7D449-4FDE-47B9-9159-5B6BE156DDEF} = {25D7D449-4FDE-47B9-9159-5B6BE156DDEF}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

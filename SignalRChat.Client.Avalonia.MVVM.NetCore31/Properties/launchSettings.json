@@ -1,0 +1,7 @@
+{
+  "profiles": {
+    "SignalRChat.Client.Avalonia.MVVM.NetCore31": {
+      "commandName": "Project"
+    }
+  }
+}
