@@ -7,7 +7,7 @@
 
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.SignalR.Client" Version="5.0.10" />
-    <PackageReference Include="ReactiveUI.Fody" Version="13.3.2" />
+    <PackageReference Include="ReactiveUI.Fody" Version="16.2.6" />
     <PackageReference Include="SignalR.EasyUse.Client" Version="0.2.1" />
   </ItemGroup>
   
